@@ -1,0 +1,11 @@
+#gameBoard {
+	display: grid;
+	grid-template-columns: 152px 152px 152px;
+	grid-template-rows: 152px 152px 152px;
+}
+
+.box{
+	width: 150px;
+	height: 150px;
+	border: 2px solid black;
+}
