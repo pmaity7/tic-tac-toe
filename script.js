@@ -74,7 +74,7 @@ const module = (function(){
 			count++;
 		}else{
 			_playerChoices(e, _turn);
-			box.style.backgroundColor = '#D8BFD8';
+			box.style.backgroundColor = '#FFDAB9';
 			count++;
 		}if(count == 9){
 			allboxes.map(x => x.style.pointerEvents = 'none');
@@ -88,7 +88,8 @@ const module = (function(){
 
 	//_playerChoices fills board array with player's choices
 	//Call _checkWinner to check winner after each move
-	//According to the turn
+	//According to turn sets the text content of textCounter
+	//Disables pointer events after a grid is filled
 	function _playerChoices(e, val){
 		var id = e.target.id;
 		var flag;
@@ -111,6 +112,7 @@ const module = (function(){
 			}
 
 		}
+		fill.style.pointerEvents = 'none';
 	}
 
 	function _checkWinner(board){
